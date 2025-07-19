@@ -12,7 +12,6 @@ function App() {
     phoneNumber: "",
     address: "",
   });
-
   function handleGeneralChange(e) {
     const { name, value } = e.target;
     setGeneralInfo((prevInfo) => ({
@@ -21,12 +20,27 @@ function App() {
     }));
   }
 
+  const [educationInfo, setEducationInfo] = useState({
+    school: "",
+    degree: "",
+    startDate: "",
+    endDate: "",
+    location: "",
+  });
+  function handleEducationChange(e) {
+    const { name, value } = e.target;
+    setEducationInfo((prevInfo) => ({
+      ...prevInfo,
+      [name]: value,
+    }));
+  }
+
   return (
     <>
       <General onChange={handleGeneralChange} />
-      <Education />
+      <Education onChange={handleEducationChange} />
       <Experience />
-      <Resume generalInfo={generalInfo} />
+      <Resume generalInfo={generalInfo} educationInfo={educationInfo} />
     </>
   );
 }

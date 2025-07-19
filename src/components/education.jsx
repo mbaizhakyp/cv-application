@@ -1,26 +1,51 @@
-function Education() {
+function Education({ onChange }) {
   return (
     <form>
       <h1>Education</h1>
       <label>
         School
-        <input type="text" placeholder="Enter your school name" />
+        <input
+          name="school"
+          onChange={onChange}
+          type="text"
+          placeholder="Enter your school name"
+        />
       </label>
       <label>
         Degree
-        <input type="text" placeholder="Enter your degree" />
+        <input
+          name="degree"
+          onChange={onChange}
+          type="text"
+          placeholder="Enter your degree"
+        />
       </label>
       <label>
         Start Date
-        <input type="number" placeholder="Enter start date" />
+        <input
+          name="startDate"
+          onChange={onChange}
+          type="date"
+          placeholder="Enter start date"
+        />
       </label>
       <label>
         End Date
-        <input type="number" placeholder="Enter end date" />
+        <input
+          name="endDate"
+          onChange={onChange}
+          type="date"
+          placeholder="Enter end date"
+        />
       </label>
       <label>
         Location
-        <input type="text" placeholder="Enter school location" />
+        <input
+          name="location"
+          onChange={onChange}
+          type="text"
+          placeholder="Enter school location"
+        />
       </label>
     </form>
   );

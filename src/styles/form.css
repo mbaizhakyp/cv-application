@@ -1,0 +1,41 @@
+.general-form,
+.education-form,
+.experience-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 2rem;
+  margin: 2rem;
+  padding: 1rem 2rem 2rem 2rem;
+  background-color: white;
+  border-radius: 3rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.general-heading,
+.experience-heading,
+.education-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3rem;
+}
+.dropdown {
+  cursor: pointer;
+  color: #888;
+  transition: color 0.3s ease;
+  font-size: 1.5rem;
+}
+.dropdown:hover {
+  color: #333;
+}
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+}
